@@ -1,0 +1,16 @@
+{
+    "title": "Meesho Product Trend Scraper Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "productUrls": {
+            "title": "Meesho Product URLs",
+            "type": "array",
+            "description": "List of Meesho product URLs to scrape.",
+            "editor": "requestListSources",
+            "default": [{"url": "https://www.meesho.com/s/p/5tndl"}],
+            "prefill": [{"url": "https://www.meesho.com/s/p/5tndl"}]
+        }
+    },
+    "required": ["productUrls"]
+}

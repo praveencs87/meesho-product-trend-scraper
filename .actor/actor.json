@@ -1,0 +1,24 @@
+{
+    "actorSpecification": 1,
+    "name": "meesho-product-trend-scraper",
+    "title": "Meesho Product Trend Scraper",
+    "description": "Extract highly accurate structured data (prices, supplier details, trend badges) from Meesho products by parsing Next.js JSON blobs at high speeds.",
+    "version": "0.0",
+    "input": "./input_schema.json",
+    "dockerfile": "../Dockerfile",
+    "minMemoryMbytes": 256,
+    "maxMemoryMbytes": 1024,
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingEvents": [
+        {
+            "eventName": "apify-actor-start",
+            "pricePerEvent": 0.00005,
+            "description": "Charged once when Actor starts"
+        },
+        {
+            "eventName": "product-scraped",
+            "pricePerEvent": 0.001,
+            "description": "Charged per Meesho product successfully scraped"
+        }
+    ]
+}
