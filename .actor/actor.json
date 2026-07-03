@@ -1,42 +1,45 @@
 {
-    "actorSpecification": 1,
-    "name": "meesho-product-trend-scraper",
-    "title": "Meesho Product Trend Scraper",
-    "description": "Extract highly accurate structured data (prices, supplier details, trend badges) from Meesho products by parsing Next.js JSON blobs at high speeds.",
-    "version": "0.0",
-    "input": "./input_schema.json",
-    "dockerfile": "../Dockerfile",
-    "minMemoryMbytes": 1024,
-    "maxMemoryMbytes": 4096,
-    "pricingModel": "PAY_PER_EVENT",
-    "pricingEvents": [
-        {
-            "eventName": "apify-actor-start",
-            "pricePerEvent": 0.00005,
-            "description": "Charged once when Actor starts"
-        },
-        {
-            "eventName": "product-scraped",
-            "pricePerEvent": 0.001,
-            "description": "Charged per Meesho product successfully scraped"
-        },
-        {
-            "eventName": "lead-extracted",
-            "pricePerEvent": 0.005,
-            "description": "Charged per lead extracted"
-        }
-    ],
-    "isPublic": true,
-    "seoTitle": "Meesho Product Trend Scraper | Apify Actor",
-    "seoDescription": "Extract highly accurate structured data (prices, supplier details, trend badges) from Meesho products by parsing Next.js JSON blobs at high speeds.",
-    "categories": [
-        "BUSINESS",
-        "DATA_EXTRACTION",
-        "LEAD_GENERATION"
-    ],
-    "defaultRunOptions": {
-        "build": "latest",
-        "timeoutSecs": 1800,
-        "memoryMbytes": 4096
+  "actorSpecification": 1,
+  "name": "meesho-product-trend-scraper",
+  "title": "Meesho Product Trend Scraper",
+  "description": "Extract highly accurate structured data (prices, supplier details, trend badges) from Meesho products by parsing Next.js JSON blobs at high speeds.",
+  "version": "0.0",
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "minMemoryMbytes": 1024,
+  "maxMemoryMbytes": 4096,
+  "pricingModel": "PAY_PER_EVENT",
+  "pricingEvents": [
+    {
+      "eventName": "apify-actor-start",
+      "pricePerEvent": 0.00005,
+      "description": "Charged once when Actor starts"
+    },
+    {
+      "eventName": "product-scraped",
+      "pricePerEvent": 0.001,
+      "description": "Charged per Meesho product successfully scraped"
+    },
+    {
+      "eventName": "lead-extracted",
+      "pricePerEvent": 0.005,
+      "description": "Charged per lead extracted"
     }
+  ],
+  "isPublic": true,
+  "seoTitle": "Meesho Product Trend Scraper | Apify Actor",
+  "seoDescription": "Extract highly accurate structured data (prices, supplier details, trend badges) from Meesho products by parsing Next.js JSON blobs at high speeds.",
+  "categories": [
+    "BUSINESS",
+    "DATA_EXTRACTION",
+    "LEAD_GENERATION"
+  ],
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 1800,
+    "memoryMbytes": 4096
+  },
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
 }
